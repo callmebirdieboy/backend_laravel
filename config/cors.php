@@ -15,20 +15,22 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],  // Apply to all API routes and Sanctum
 
-    'allowed_methods' => ['*'],
+    'allowed_methods' => ['*'],  // Allow all HTTP methods (GET, POST, etc.)
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://angularfrontfinal-production.up.railway.app',  // Your frontend URL
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [],  // You can leave this empty or use it for more specific patterns
 
-    'allowed_headers' => ['*'],
+    'allowed_headers' => ['*'],  // Allow all headers (if needed, restrict to specific headers)
 
-    'exposed_headers' => [],
+    'exposed_headers' => [],  // Leave empty unless you want to expose specific headers
 
-    'max_age' => 0,
+    'max_age' => 0,  // How long the results of a preflight request can be cached by the browser
 
-    'supports_credentials' => false,
+    'supports_credentials' => false,  // Set to true if you need credentials like cookies or HTTP auth
 
 ];
